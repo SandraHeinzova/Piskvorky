@@ -6,8 +6,23 @@ all_sets = [line0, line1, line2, line3]
 
 def hrac1():
     print(f"Hraje {player1}:")
-    num1 = int(input("Zadej hodnotu x (řada): "))
-    num2 = int(input("Zadej hodnotu y (sloupec): "))
+    while True:
+        num1 = input("Zadej hodnotu x (řada): ")
+        try:
+            num1 = int(num1)
+        except ValueError:
+            print ("Špatná volba, musíš zadat číslo 1-3.")
+        else:
+            break
+            
+    while True:
+        num2 = input("Zadej hodnotu y (sloupec): ")
+        try:
+            num2 = int(num2)
+        except ValueError:
+            print ("Špatná volba, musíš zadat číslo 1-3.")
+        else:
+            break            
 
     if all_sets[num1][num2] != " ":
         print("Špatná volba, zvol znovu")
@@ -18,8 +33,23 @@ def hrac1():
 
 def hrac2():
     print(f"Hraje {player2}:")
-    num3 = int(input("Zadej hodnotu x (řada): "))
-    num4 = int(input("Zadej hodnotu y (sloupec): "))
+    while True:
+        num3 = input("Zadej hodnotu x (řada): ")
+        try:
+            num3 = int(num3)
+        except ValueError:
+            print ("Špatná volba, musíš zadat číslo 1-3.")
+        else:
+            break
+            
+    while True:
+        num4 = input("Zadej hodnotu y (sloupec): ")
+        try:
+            num4 = int(num4)
+        except ValueError:
+            print ("Špatná volba, musíš zadat číslo 1-3.")
+        else:
+            break
 
     if all_sets[num3][num4] != " ":
         print("Špatná volba, zvol znovu")
